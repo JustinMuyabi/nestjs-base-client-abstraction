@@ -3,7 +3,7 @@ import {firstValueFrom, retry, timeout, TimeoutError} from "rxjs";
 import {InternalServerErrorException, RequestTimeoutException} from "@nestjs/common";
 import {ClientOptions} from "./interfaces/client-options.interface";
 
-export abstract class BaseClient {
+export abstract class BaseClientAbstract {
     private readonly DEFAULT_TIMEOUT: number = 10000;
     private readonly DEFAULT_RETRY_ATTEMPTS: number = 10;
 
