@@ -1,0 +1,37 @@
+{
+  "name": "nestjs-base-client-abstraction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "Justin Joram",
+  "license": "ISC",
+  "description": "Base client abstraction for NestJS microservices with retry and timeout handling",
+  "keywords": [
+    "nestjs",
+    "microservices",
+    "client"
+  ],
+  "devDependencies": {
+    "@nestjs/common": "^11.0.10",
+    "@nestjs/microservices": "^11.0.10",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.5",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "rxjs": "^7.8.2",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/microservices": "^10.0.0",
+    "rxjs": "^7.8.0"
+  }
+}
